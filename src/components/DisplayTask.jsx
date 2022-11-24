@@ -145,7 +145,9 @@ const DisplayTask = ({ data, index, onUpdate, onDelete }) => {
         >
           <BiBookmarks
             className={`${
-              dataTaskTag.length > 0 ? "text-[#2F80ED]" : "text-[#828282]"
+              dataTaskTag && dataTaskTag.length > 0
+                ? "text-[#2F80ED]"
+                : "text-[#828282]"
             }  w-5 h-5  `}
             onClick={() => setOpenTag(!openTag)}
           />
